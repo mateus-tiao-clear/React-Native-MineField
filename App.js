@@ -7,7 +7,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>
-        Iniciando o Mines!!!
+        Iniciando o Mines.
       </Text>
       <Text>
         Tamanho da grade:
@@ -22,6 +22,8 @@ export default function App() {
       <Field mined />
       <Field mined opened />
       <Field mined opened exploded />
+      <Field flagged />
+      <Field flagged opened />
     </View>
   )
 }
