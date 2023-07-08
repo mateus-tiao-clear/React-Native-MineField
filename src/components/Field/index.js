@@ -12,6 +12,7 @@ const Field = ({
   exploded = false,
   flagged = false,
   onOpen,
+  onSelect
 }) => {
   const styleField = [styles.field];
   if (opened) styleField.push(styles.opened);
@@ -28,7 +29,7 @@ const Field = ({
   }
 
   return (
-    <TouchableWithoutFeedback onPress={onOpen}>
+    <TouchableWithoutFeedback onPress={onOpen} onLongPress={onSelect}>
       <View style={styleField}>
         {!mined && opened && nearMines > 0 ? (
           <Text style={[styles.label, {color: color}]}>{nearMines}</Text>

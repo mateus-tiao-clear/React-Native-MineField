@@ -8,7 +8,7 @@ import styles from './styles';
 const MineField = ({board, onOpenField}) => {
   const rows = board.map((row, r) => {
     const columns = row.map((field, c) => {
-      return <Field {...field} key={c} onOpen={() => onOpenField(r, c)} />;
+      return <Field {...field} key={c} onOpen={() => onOpenField(r, c) } onSelect={e => onSelectField(r, c)}/>;
     });
     return (
       <View key={r} style={{flexDirection: 'row'}}>
